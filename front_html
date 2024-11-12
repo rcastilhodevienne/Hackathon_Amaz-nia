@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voz da Amazônia</title>
+    <style>
+        /* Estilos básicos para o design inspirado na Amazônia */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #c8e6c9;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            background-color: #43a047;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:disabled {
+            background-color: #9e9e9e;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            margin-bottom: 5px;
+        }
+
+        .input-group input, .input-group textarea {
+            padding: 10px;
+            border: 1px solid #c8e6c9;
+            border-radius: 5px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Voz da Amazônia</h1>
+        <p>Seu portal para monitoramento e engajamento nas políticas públicas da Amazônia</p>
+    </header>
+
+    <div class="container">
+        <!-- Painel de Indicadores Comunitários -->
+        <div class="card">
+            <h2>Indicadores da Comunidade</h2>
+            <p>Acompanhe as principais necessidades da sua comunidade e veja como podemos agir juntos.</p>
+            <ul>
+                <li><strong>Saúde:</strong> 75% das comunidades relatam falta de profissionais</li>
+                <li><strong>Educação:</strong> 60% relatam falta de infraestrutura</li>
+                <li><strong>Infraestrutura:</strong> 85% precisam de melhorias nas estradas</li>
+            </ul>
+        </div>
+
+        <!-- Formulário para apontar necessidades -->
+        <div class="card">
+            <h2>Apontar Necessidade</h2>
+            <form id="reportForm">
+                <div class="input-group">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="saude">Saúde</option>
+                        <option value="educacao">Educação</option>
+                        <option value="infraestrutura">Infraestrutura</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" rows="3" placeholder="Descreva a necessidade..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar Necessidade</button>
+            </form>
+        </div>
+
+        <!-- Módulo de Engajamento Comunitário -->
+        <div class="card">
+            <h2>Engajamento Comunitário</h2>
+            <p>Participe de atividades para fortalecer a comunidade e melhorar os indicadores locais.</p>
+            <button class="btn">Ver Ações Próximas</button>
+        </div>
+    </div>
+
+    <script>
+        // Simulação de funcionalidade para envio de necessidade
+        document.getElementById("reportForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Necessidade enviada com sucesso! Obrigado por participar.");
+        });
+    </script>
+</body>
+</html>
